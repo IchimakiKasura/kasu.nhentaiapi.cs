@@ -2,8 +2,8 @@
   <PropertyGroup>
 
     <!-- bruh -->
-    <!-- <OutputType>Library</OutputType> -->
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
+    <!-- <OutputType>Exe</OutputType> -->
 
     <!-- ok what -->
     <TargetFramework>net6.0</TargetFramework>

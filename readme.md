@@ -2,6 +2,8 @@
 
 I'll try implementing a C# version of my [kasu.nhentaiapi.js](https://github.com/IchimakiKasura/kasu.nhentaiapi.js) API's parser.js.
 
+### **This port is built on .NET 6**
+
 ## Usage
 
 ### Before using Reference the `.DLL` to your `.csproj` file
