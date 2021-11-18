@@ -1,7 +1,0 @@
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.dll
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.deps.json
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.pdb
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.Json.dll
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.Json.pdb
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.Json.xml
-C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS\bin\Debug\net6.0\publish\kasuNhentaiCS.xml
