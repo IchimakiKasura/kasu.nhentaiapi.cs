@@ -17,6 +17,7 @@ Or put the `kasuNhentaiCS.dll` and `kasuNhentaiCS.Json.dll` in your root project
 <Reference Include="kasuNhentaiCS.dll">
 <Reference Include="kasuNhentaiCS.Json.dll">
 ```
+same goes for the `kasuNhentaiCS.xml` and `kasuNhentaiCS.Json.xml` if you want to get the Documentations
 
 ## Example
 ```cs
