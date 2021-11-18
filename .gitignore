@@ -1,4 +1,5 @@
-/kasuNhentaiCS/obj
+./kasuNhentaiCS/obj
 /kasuNhentaiCS/file.txt
 /kasuNhentaiCS/BenchmarkDotNet.Artifacts
+/kasuNhentaiCS.json/obj
 /kasuNhentaiCS.json/kasuNhentaiCS.Json.cs
