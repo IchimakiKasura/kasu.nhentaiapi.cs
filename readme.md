@@ -9,17 +9,13 @@ I'll try implementing a C# version of my [kasu.nhentaiapi.js](https://github.com
 ### Before using Reference the `.DLL` to your `.csproj` file
 Add this on the `<ItemGroup>`:<br/>
 ```csproj
-<Reference Include="kasuNhentaiCS">
-    <HintPath>-your path to-\output\kasuNhentaiCS.dll</HintPath>
-    <HintPath>-your path to-\output\kasuNhentaiCS.Json.dll</HintPath>
-</Reference>
+<Reference Include="-your path to-\output\kasuNhentaiCS.dll">
+<Reference Include="-your path to-\output\kasuNhentaiCS.Json.dll">
 ```
 Or put the `kasuNhentaiCS.dll` and `kasuNhentaiCS.Json.dll` in your root project and do
 ```csproj
-<Reference Include="kasuNhentaiCS">
-    <HintPath>kasuNhentaiCS.dll</HintPath>
-    <HintPath>kasuNhentaiCS.Json.dll</HintPath>
-</Reference>
+<Reference Include="kasuNhentaiCS.dll">
+<Reference Include="kasuNhentaiCS.Json.dll">
 ```
 
 ## Example
