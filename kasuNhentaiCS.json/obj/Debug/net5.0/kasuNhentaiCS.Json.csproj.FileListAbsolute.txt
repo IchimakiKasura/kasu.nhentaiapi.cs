@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\bin\Debug\net5.0\kasuNhentaiCS.Json.deps.json
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\bin\Debug\net5.0\kasuNhentaiCS.Json.dll
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\bin\Debug\net5.0\ref\kasuNhentaiCS.Json.dll
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\bin\Debug\net5.0\kasuNhentaiCS.Json.pdb
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\bin\Debug\net5.0\kasuNhentaiCS.Json.xml
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.dll
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\ref\kasuNhentaiCS.Json.dll
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.xml
+C:\Users\Administrator\Desktop\programming stuff\nodeJS Projects\kasu.nhentaiapi.js\CsharpParser\kasuNhentaiCS.json\obj\Debug\net5.0\kasuNhentaiCS.Json.pdb

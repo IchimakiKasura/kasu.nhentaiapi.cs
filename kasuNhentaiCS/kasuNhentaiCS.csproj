@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <!-- bruh -->
+    <!-- <OutputType>Library</OutputType> -->
+    <OutputType>Exe</OutputType>
+
+    <!-- ok what -->
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    
+    <!-- Package info -->
+    <Product>KasuNhentaiLibrary</Product>
+    <PackageId>KasuNhentaiLibrary</PackageId>
+    <Version>0.4.0</Version>
+    <AssemblyVersion>0.4.0</AssemblyVersion>
+    <Authors>Ichimaki Kasura</Authors>
+    <Company>Ichimaki Kasura</Company>
+    <Copyright>Copyright © 2021</Copyright>
+    <LangVersion>10.0</LangVersion>
+    <OutputPath>../Output</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\kasuNhentaiCS.json\kasuNhentaiCS.Json.csproj" />
+    <PackageReference Include="Benchmarkdotnet" Version="0.13.1" />
+    <CSFile Include="./Core/*.cs;./Core/lib/*.cs" Exclude="./main.cs"/>
+  </ItemGroup>
+</Project>

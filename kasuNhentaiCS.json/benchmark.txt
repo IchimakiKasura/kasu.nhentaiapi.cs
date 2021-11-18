@@ -1,0 +1,236 @@
+public class test
+{
+    string _object = @"{""_String"":""string"",""_Array"":[""array 1"",""array 2""],""_number"": ""123"",""__object"":{""_string"":""object string"",""_stringTwo"":""object string 2""}}";
+    
+    [Benchmark]
+    public void _default_Deserializer()
+    {
+        // using Default
+        var _dynamic = JsonDeserializer.deserializeObj(this._object);
+        console.log($"value: {_dynamic._String},                                      type: [{_dynamic._String.GetType()}]");
+        console.log($"value: {_dynamic._Array},                       type: [{_dynamic._Array.GetType()}]");
+        console.log($"value: {_dynamic._Array[0]},                                     type: [{_dynamic._Array[0].GetType()}]");
+        console.log($"value: {_dynamic._Array[1]},                                     type: [{_dynamic._Array[1].GetType()}]");
+    }
+    
+    [Benchmark]
+    public void _selector_ForLoop_Instance()
+    {
+        // using with Selector
+        var _selector = new JsonDeserializer(this._object);
+        console.log($"value: {_selector.selector_ForLoop_Instance_Regex("_String")},                                      type: [{_selector.selector_ForLoop_Instance_Regex("_String").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Instance_Regex("_Array")}, type: [{_selector.selector_ForLoop_Instance_Regex("_Array").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Instance_Regex("_Array:0")},                                     type: [{_selector.selector_ForLoop_Instance_Regex("_Array:0").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Instance_Regex("_Array:1")},                                     type: [{_selector.selector_ForLoop_Instance_Regex("_Array:1").GetType()}]");
+    }
+
+    [Benchmark]
+    public void _selector_ForEach_Instance()
+    {
+        // using with Selector
+        var _selector = new JsonDeserializer(this._object);
+        console.log($"value: {_selector.selector_ForEach_Instance_Regex("_String")},                                      type: [{_selector.selector_ForEach_Instance_Regex("_String").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Instance_Regex("_Array")}, type: [{_selector.selector_ForEach_Instance_Regex("_Array").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Instance_Regex("_Array:0")},                                     type: [{_selector.selector_ForEach_Instance_Regex("_Array:0").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Instance_Regex("_Array:1")},                                     type: [{_selector.selector_ForEach_Instance_Regex("_Array:1").GetType()}]");
+    }
+
+    [Benchmark]
+    public void _selector_ForLoop_Static()
+    {
+        // using with Selector
+        var _selector = new JsonDeserializer(this._object);
+        console.log($"value: {_selector.selector_ForLoop_Static_Regex("_String")},                                      type: [{_selector.selector_ForLoop_Static_Regex("_String").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Static_Regex("_Array")}, type: [{_selector.selector_ForLoop_Static_Regex("_Array").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Static_Regex("_Array:0")},                                     type: [{_selector.selector_ForLoop_Static_Regex("_Array:0").GetType()}]");
+        console.log($"value: {_selector.selector_ForLoop_Static_Regex("_Array:1")},                                     type: [{_selector.selector_ForLoop_Static_Regex("_Array:1").GetType()}]");
+    }
+
+    [Benchmark]
+    public void _selector_ForEach_Static()
+    {
+        // using with Selector
+        var _selector = new JsonDeserializer(this._object);
+        console.log($"value: {_selector.selector_ForEach_Static_Regex("_String")},                                      type: [{_selector.selector_ForEach_Static_Regex("_String").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Static_Regex("_Array")}, type: [{_selector.selector_ForEach_Static_Regex("_Array").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Static_Regex("_Array:0")},                                     type: [{_selector.selector_ForEach_Static_Regex("_Array:0").GetType()}]");
+        console.log($"value: {_selector.selector_ForEach_Static_Regex("_Array:1")},                                     type: [{_selector.selector_ForEach_Static_Regex("_Array:1").GetType()}]");
+    }
+}
+
+
+public dynamic selector_ForLoop_Static_Regex(string selector)
+{
+    TemporaryList = DataList;
+
+    string[] selectors;
+
+    selectors = selector.Split(">");
+
+    for (int i = 0; i < selectors.Length; i++)
+    {
+        if (Regex.IsMatch(selectors[i], @":"))
+        {
+            int num = int.Parse(nth.Match(selectors[i]).Groups["num"].ToString());  // gets the number in the selector if ":" detected
+
+            selectors[i] = nth.Replace(selectors[i], "");
+
+            TemporaryList = TemporaryList.GetProperty(selectors[i])[num];
+        }
+        else
+        {
+            TemporaryList = TemporaryList.GetProperty(selectors[i]);
+        }
+    }
+
+    string Data = TemporaryList.GetRawText();
+
+    if (Regex.IsMatch(Data, @"^"""))
+        return TemporaryList.GetString();           // returns a string
+
+    if (Regex.IsMatch(Data, @"^[0-9]+"))
+        return TemporaryList.GetInt32();            // returns an int32
+
+    if (Regex.IsMatch(Data, @"^\["))
+        return new                                  // returns an object
+        {
+            data = TemporaryList,
+            count = TemporaryList.GetArrayLength()
+        };
+    if (Regex.IsMatch(Data, @"^\{"))
+        return TemporaryList;                       // returns an object
+
+    return TemporaryList;                           // returns JsonElement
+}
+
+public dynamic selector_ForEach_Static_Regex(string selector)
+{
+    TemporaryList = DataList;
+
+    string[] selectors;
+
+    selectors = selector.Split(">");
+
+    foreach (var item in selectors)
+    {
+        if (Regex.IsMatch(item, @":"))
+        {
+            int num = int.Parse(nth.Match(item).Groups["num"].ToString());
+
+            TemporaryList = TemporaryList.GetProperty(nth.Replace(item, ""))[num];
+        }
+        else
+        {
+            TemporaryList = TemporaryList.GetProperty(item);
+        }
+    }
+
+    string Data = TemporaryList.GetRawText();
+
+    if (Regex.IsMatch(Data, @"^"""))
+        return TemporaryList.GetString();           // returns a string
+        
+    if (Regex.IsMatch(Data, @"^[0-9]+"))
+        return TemporaryList.GetInt32();            // returns an int32
+
+    if (Regex.IsMatch(Data, @"^\["))
+        return new                                  // returns an object
+        {
+            data = TemporaryList,
+            count = TemporaryList.GetArrayLength()
+        };
+    if (Regex.IsMatch(Data, @"^\{"))
+        return TemporaryList;                       // returns an object
+
+    return TemporaryList;                           // returns JsonElement
+}
+
+public dynamic selector_ForLoop_Instance_Regex(string selector)
+{
+    Regex nths = new(@":(?<num>.*)", RegexOptions.Compiled);
+
+    TemporaryList = DataList;
+
+    string[] selectors;
+
+    selectors = selector.Split(">");
+
+    for (int i = 0; i < selectors.Length; i++)
+    {
+        if (Regex.IsMatch(selectors[i], @":"))
+        {
+            int num = int.Parse(nths.Match(selectors[i]).Groups["num"].ToString());  // gets the number in the selector if ":" detected
+
+            selectors[i] = nths.Replace(selectors[i], "");
+
+            TemporaryList = TemporaryList.GetProperty(selectors[i])[num];
+        }
+        else
+        {
+            TemporaryList = TemporaryList.GetProperty(selectors[i]);
+        }
+    }
+
+    string Data = TemporaryList.GetRawText();
+
+    if (Regex.IsMatch(Data, @"^"""))
+        return TemporaryList.GetString();           // returns a string
+
+    if (Regex.IsMatch(Data, @"^[0-9]+"))
+        return TemporaryList.GetInt32();            // returns an int32
+
+    if (Regex.IsMatch(Data, @"^\["))
+        return new                                  // returns an object
+        {
+            data = TemporaryList,
+            count = TemporaryList.GetArrayLength()
+        };
+    if (Regex.IsMatch(Data, @"^\{"))
+        return TemporaryList;                       // returns an object
+
+    return TemporaryList;                           // returns JsonElement
+}
+
+public dynamic selector_ForEach_Instance_Regex(string selector)
+{
+    Regex nths = new(@":(?<num>.*)", RegexOptions.Compiled);
+
+    TemporaryList = DataList;
+
+    string[] selectors;
+
+    selectors = selector.Split(">");
+
+    foreach (var item in selectors)
+    {
+        if (Regex.IsMatch(item, @":"))
+        {
+            int num = int.Parse(nths.Match(item).Groups["num"].ToString());
+
+            TemporaryList = TemporaryList.GetProperty(nths.Replace(item, ""))[num];
+        }
+        else
+        {
+            TemporaryList = TemporaryList.GetProperty(item);
+        }
+    }
+
+    string Data = TemporaryList.GetRawText();
+
+    if (Regex.IsMatch(Data, @"^"""))
+        return TemporaryList.GetString();           // returns a string
+        
+    if (Regex.IsMatch(Data, @"^[0-9]+"))
+        return TemporaryList.GetInt32();            // returns an int32
+
+    if (Regex.IsMatch(Data, @"^\["))
+        return new                                  // returns an object
+        {
+            data = TemporaryList,
+            count = TemporaryList.GetArrayLength()
+        };
+    if (Regex.IsMatch(Data, @"^\{"))
+        return TemporaryList;                       // returns an object
+
+    return TemporaryList;                           // returns JsonElement
+}
