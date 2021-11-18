@@ -52,7 +52,7 @@ class Program
 - [Selector](#usage- "kasuNhentaiCS.Json.JsonDeserializer.selector") - it'll automatically gives you the value with returnType.
 - [DeserializeObj](#usage- "kasuNhentaiCS.Json.JsonDeserializer.deserializeObj") - it'll still give you the value but always returns with a `JsonElement` type.
 ---
-<center>
+<div aligh="center">
 
 ## _**Benchmarks :**_
 | Method                    | Mean      | Error     | StdDev    | Median    |
@@ -67,6 +67,7 @@ class Program
 >.NET SDK=6.0.100<br/>
 >  [Host]     : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT<br/>
 >  DefaultJob : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
-</center>
+
+</div>
 
 _NOTE:_ If you're thinking `"wHy There's no ForLoop/Foreach default deserializer"` It is because its in the system or .NET framework which I cant modify, It is already built-in to the .NET. If you're still thinking `"what's the Instance and Static, and why can't we use the static?"` It's a regex.
