@@ -1,8 +1,10 @@
 // cSPELL: ignoreRegExp /kasuNhentaiCS/g
+global using System.ComponentModel;
 namespace kasuNhentaiCS.library;
 /// <summary>
 /// Parser's Regex listing.
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 internal struct matcherRegex
 {
     /// <summary>

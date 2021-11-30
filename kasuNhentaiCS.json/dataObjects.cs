@@ -1,3 +1,4 @@
+using System.ComponentModel;
 // cSPELL: ignoreRegExp /kasuNhentaiCS/g
 namespace kasuNhentaiCS.Json;
 
@@ -5,6 +6,7 @@ namespace kasuNhentaiCS.Json;
 /// Waoh how did you find this? <br/>
 /// this is illegal!
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public struct _selector
 {
     /// <summary>

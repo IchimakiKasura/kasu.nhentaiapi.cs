@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Linq;
 
 namespace kasuNhentaiCS;
+[EditorBrowsable(EditorBrowsableState.Never)]
 internal class fetcher
 {
     public static string fetch(string url)
@@ -101,58 +102,51 @@ public static class Parser
                 case "tag":
                     if (tags == "none")
                     {
-                        tags = "";
-                        tags += $"{value}";
+                        tags = value;
                     }
                     else tags += $", {value}";
                     break;
                 case "character":
                     if (chr == "none")
                     {
-                        chr = "";
-                        chr += $"{value}, ";
+                        chr = value;
                     }
-                    else chr += $",{value}";
+                    else chr += $", {value}";
                     break;
                 case "parody":
                     if (parodies == "none")
                     {
-                        parodies = "";
-                        parodies += $"{value}, ";
+                        parodies = value;
                     }
-                    else parodies += $",{value}";
+                    else parodies += $", {value}";
                     break;
                 case "artist":
                     if (Artist == "none")
                     {
-                        Artist = "";
-                        Artist += $"{value}, ";
+                        Artist = value;
                     }
-                    else Artist += $",{value}";
+                    else Artist += $", {value}";
                     break;
                 case "language":
                     if (Lang == "none")
                     {
-                        Lang = "";
-                        Lang += $"{value}, ";
+                        Lang = value;
                     }
-                    else Lang += $",{value}";
+                    else Lang += $", {value}";
                     break;
                 case "category":
                     if (Ctg == "none")
                     {
-                        Ctg = "";
-                        Ctg += $"{value}, ";
+                        Ctg = value;
                     }
-                    else Ctg += $",{value}";
+                    else Ctg += $", {value}";
                     break;
                 case "group":
                     if (Groups == "none")
                     {
-                        Groups = "";
-                        Groups += $"{value}, ";
+                        Groups = value;
                     }
-                    else Groups += $",{value}";
+                    else Groups += $", {value}";
                     break;
             }
         }
@@ -284,8 +278,8 @@ public static class Parser
 
         foreach (var s in data.Select((value, i) => (value, i)))
         {
-            int id = int.Parse(Regex.Match(s.value, @"href=""/g/(?<id>.*?)/""").Groups["id"].ToString());
-            string[] Lang = Regex.Match(s.value, @"data-tags=""(.*?)""").ToString().Split(" ");
+            int id = int.Parse(Regex.Match(s.value, @"href=""/g/(?<id>.*?)/""").Groups["id"].Value);
+            string[] Lang = Regex.Match(s.value, @"data-tags=""(.*?)""").Value.Split(" ");
             string languages = "";
 
             foreach (string lang in Lang)
@@ -331,8 +325,8 @@ public static class Parser
             dataList[s.i] = new()
             {
                 id = id,
-                title = Regex.Match(s.value, @"caption"">(?<title>.*?)<").Groups["title"].ToString(),
-                thumbnail = Regex.Match(s.value, @"data-src=""(?<thumb>.*?)""").Groups["thumb"].ToString(),
+                title = Regex.Match(s.value, @"caption"">(?<title>.*?)<").Groups["title"].Value,
+                thumbnail = Regex.Match(s.value, @"data-src=""(?<thumb>.*?)""").Groups["thumb"].Value,
                 url = $"{matcherRegex.URLregex.Replace(url.href, "")}g/{id}",
                 languages = languages
             };

@@ -1,5 +1,8 @@
 # Changelogs
 
+## 0.5.0-beta
+- methods that aren't really used is now hidden.
+
 ## 0.4.0-beta
 - Added async version of the other methods.
 - improved Json deserializer speed.

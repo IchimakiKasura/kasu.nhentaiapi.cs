@@ -7,6 +7,7 @@ namespace kasuNhentaiCS;
 /// [Brain of the operation]<br/>
 /// Parses the Html string into an object. 
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 internal struct _Matcher
 {
     // no i wont talk about why i named it kagebunshin
@@ -49,7 +50,7 @@ internal struct _Matcher
             status = e.Message;
         }
         var clones = kagebunshin(html);
-        string body = Regex.Unescape(Regex.Unescape(matcherRegex.BookNet.Match(html).Groups["parse"].ToString()));
+        string body = Regex.Unescape(Regex.Unescape(matcherRegex.BookNet.Match(html).Groups["parse"].Value));
 
         return new()
         {

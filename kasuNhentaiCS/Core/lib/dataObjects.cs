@@ -5,6 +5,7 @@ namespace kasuNhentaiCS.library;
 /// <summary>
 /// Properties for the <see cref="_Matcher.BOOKnet(string)"/>.
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 internal struct BookData
 {
     /// <summary>
@@ -33,9 +34,11 @@ internal struct BookData
     public string status { readonly get; set; }
     
 }
+
 /// <summary>
 /// Properties for the <see cref="_Matcher.PageInfo(string)"/>.
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 internal struct PageData
 {
     /// <summary>
@@ -51,10 +54,12 @@ internal struct PageData
     /// </summary>
     public string status { readonly get; set; }
 }
+
 /// <summary>
 /// Book Object properties.
 /// </summary>
 [Serializable]
+[EditorBrowsable(EditorBrowsableState.Always)]
 public struct BookObj
 {
     /// <summary>
@@ -88,10 +93,12 @@ public struct BookObj
     /// </summary>
     public string uploaded { get; set; }
 }
+
 /// <summary>
 /// Page Object properties.
 /// </summary>
 [Serializable]
+[EditorBrowsable(EditorBrowsableState.Always)]
 public struct PageObj
 {   
     /// <summary>
@@ -119,10 +126,12 @@ public struct PageObj
     /// </summary>
     public _resultsObject[] results { get; set; }
 }
+
 /// <summary>
 /// Waoh how did you find this? <br/>
 /// this is illegal!
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public struct _resultsObject
 {
     /// <summary>
@@ -150,6 +159,7 @@ public struct _resultsObject
 /// Waoh how did you find this? <br/>
 /// this is illegal!
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public struct _Title
 {
     /// <summary>
@@ -165,6 +175,7 @@ public struct _Title
 /// Waoh how did you find this? <br/>
 /// this is illegal!
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public struct _Images
 {
     /// <summary>
@@ -180,6 +191,7 @@ public struct _Images
 /// Waoh how did you find this? <br/>
 /// this is illegal!
 /// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public struct _Tag_table
 {
     /// <summary>
