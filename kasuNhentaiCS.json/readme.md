@@ -52,21 +52,22 @@ class Program
 - [Selector](#usage- "kasuNhentaiCS.Json.JsonDeserializer.selector") - it'll automatically gives you the value with returnType.
 - [DeserializeObj](#usage- "kasuNhentaiCS.Json.JsonDeserializer.deserializeObj") - it'll still give you the value but always returns with a `JsonElement` type.
 ---
-<center>
+<div aligh="center">
 
 ## _**Benchmarks :**_
-| Method                    ||| Mean      || Error     || StdDev    || Median    |
-|:--------------------------|||----------:||----------:||----------:||----------:|
-|default Deserializer       |||  2.831 ms || 0.0780 ms || 0.2301 ms ||  2.930 ms |
-|selector ForEach Static    |||  2.877 ms || 0.0794 ms || 0.2342 ms ||  2.991 ms |
-|selector ForLoop Static    |||  2.887 ms || 0.0798 ms || 0.2341 ms ||  2.990 ms |
-|selector ForLoop Instance  ||| 12.821 ms || 0.1098 ms || 0.1027 ms || 12.805 ms |
-|selector ForEach Instance  ||| 12.921 ms || 0.1785 ms || 0.1670 ms || 12.898 ms |
+| Method                    | Mean      | Error     | StdDev    | Median    |
+|:--------------------------|----------:|----------:|----------:|----------:|
+|default Deserializer       |  2.831 ms | 0.0780 ms | 0.2301 ms |  2.930 ms |
+|selector ForEach Static    |  2.877 ms | 0.0794 ms | 0.2342 ms |  2.991 ms |
+|selector ForLoop Static    |  2.887 ms | 0.0798 ms | 0.2341 ms |  2.990 ms |
+|selector ForLoop Instance  | 12.821 ms | 0.1098 ms | 0.1027 ms | 12.805 ms |
+|selector ForEach Instance  | 12.921 ms | 0.1785 ms | 0.1670 ms | 12.898 ms |
 >BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22000 <br/>
 >Intel Core2 Quad CPU Q6600 2.40GHz, 1 CPU, 4 logical and 4 physical cores<br/>
 >.NET SDK=6.0.100<br/>
 >  [Host]     : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT<br/>
 >  DefaultJob : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
-</center>
+
+</div>
 
 _NOTE:_ If you're thinking `"wHy There's no ForLoop/Foreach default deserializer"` It is because its in the system or .NET framework which I cant modify, It is already built-in to the .NET. If you're still thinking `"what's the Instance and Static, and why can't we use the static?"` It's a regex.
