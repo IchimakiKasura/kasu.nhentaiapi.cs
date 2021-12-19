@@ -1,5 +1,8 @@
 # Changelogs
 
+## 0.5.1-beta
+- Fixed the bug where the language is not showing.
+
 ## 0.5.0-beta
 - methods that aren't really used is now hidden.
 

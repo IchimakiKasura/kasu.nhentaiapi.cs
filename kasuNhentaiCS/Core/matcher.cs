@@ -8,7 +8,7 @@ namespace kasuNhentaiCS;
 /// Parses the Html string into an object. 
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-internal struct _Matcher
+internal struct Matcher
 {
     // no i wont talk about why i named it kagebunshin
     private static dynamic kagebunshin(string html)

@@ -20,7 +20,7 @@ internal class kasunhentaiapi
 
         var watch = new System.Diagnostics.Stopwatch();
         watch.Start();
-        var url = new nhentaiURL("https://nhentai.net/tag/crossdressing");
+        var url = new nhentaiURL("https://nhentai.net/");
         console.log("-----NET-----");
         var ass = Parser.page(url);
         console.log("CurrentUrl: "+ass.CurrentUrl);
@@ -43,19 +43,19 @@ internal class kasunhentaiapi
         }
         watch.Stop();
         console.log(watch.Elapsed);
-        watch.Restart();
-        var data = Parser.book(new nhentaiURL("https://nhentai.net/g/228722"));
-        Console.WriteLine("\n"+data.id);
-        Console.WriteLine(data.url);
-        Console.WriteLine(data.title.origin);
-        Console.WriteLine(data.title.translated);
-        Console.WriteLine(data.images.cover);
-        Console.WriteLine(data.images.page_source);
-        Console.WriteLine(data.tag_table.tag);
-        Console.WriteLine(data.number_pages);
-        Console.WriteLine(data.uploaded);
-        watch.Stop();
-        console.log(watch.Elapsed);
+        // watch.Restart();
+        // var data = Parser.book(new nhentaiURL("https://nhentai.net/g/228722"));
+        // Console.WriteLine("\n"+data.id);
+        // Console.WriteLine(data.url);
+        // Console.WriteLine(data.title.origin);
+        // Console.WriteLine(data.title.translated);
+        // Console.WriteLine(data.images.cover);
+        // Console.WriteLine(data.images.page_source);
+        // Console.WriteLine(data.tag_table.tag);
+        // Console.WriteLine(data.number_pages);
+        // Console.WriteLine(data.uploaded);
+        // watch.Stop();
+        // console.log(watch.Elapsed);
     }
 
 }

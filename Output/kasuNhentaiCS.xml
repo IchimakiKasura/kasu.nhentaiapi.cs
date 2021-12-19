@@ -6,7 +6,7 @@
     <members>
         <member name="T:kasuNhentaiCS.library.BookData">
             <summary>
-            Properties for the <see cref="M:kasuNhentaiCS._Matcher.BOOKnet(System.String)"/>.
+            Properties for the <see cref="M:kasuNhentaiCS.Matcher.BOOKnet(System.String)"/>.
             </summary>
         </member>
         <member name="P:kasuNhentaiCS.library.BookData.id">
@@ -41,7 +41,7 @@
         </member>
         <member name="T:kasuNhentaiCS.library.PageData">
             <summary>
-            Properties for the <see cref="M:kasuNhentaiCS._Matcher.PageInfo(System.String)"/>.
+            Properties for the <see cref="M:kasuNhentaiCS.Matcher.PageInfo(System.String)"/>.
             </summary>
         </member>
         <member name="P:kasuNhentaiCS.library.PageData.body">
@@ -136,106 +136,106 @@
             • results in array. wha-
             </summary>
         </member>
-        <member name="T:kasuNhentaiCS.library._resultsObject">
+        <member name="T:kasuNhentaiCS.library.resultsObject">
             <summary>
             Waoh how did you find this? <br/>
             this is illegal!
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._resultsObject.id">
+        <member name="P:kasuNhentaiCS.library.resultsObject.id">
             <summary>
             • ID or Code or whatever you call.
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._resultsObject.title">
+        <member name="P:kasuNhentaiCS.library.resultsObject.title">
             <summary>
             • taitoru.
             </summary>    
         </member>
-        <member name="P:kasuNhentaiCS.library._resultsObject.thumbnail">
+        <member name="P:kasuNhentaiCS.library.resultsObject.thumbnail">
             <summary>
             • Cover picture.
             </summary>    
         </member>
-        <member name="P:kasuNhentaiCS.library._resultsObject.url">
+        <member name="P:kasuNhentaiCS.library.resultsObject.url">
             <summary>
             • It's just the combination of the currenturl with id innit.
             </summary>    
         </member>
-        <member name="P:kasuNhentaiCS.library._resultsObject.languages">
+        <member name="P:kasuNhentaiCS.library.resultsObject.languages">
             <summary>
             • NANI TTE-
             </summary>    
         </member>
-        <member name="T:kasuNhentaiCS.library._Title">
+        <member name="T:kasuNhentaiCS.library.Title">
             <summary>
             Waoh how did you find this? <br/>
             this is illegal!
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Title.origin">
+        <member name="P:kasuNhentaiCS.library.Title.origin">
             <summary>
             original
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Title.translated">
+        <member name="P:kasuNhentaiCS.library.Title.translated">
             <summary>
             トランスレイト??? wait it's supposed to be in english cuz' it's translated.
             </summary>
         </member>
-        <member name="T:kasuNhentaiCS.library._Images">
+        <member name="T:kasuNhentaiCS.library.Images">
             <summary>
             Waoh how did you find this? <br/>
             this is illegal!
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Images.cover">
+        <member name="P:kasuNhentaiCS.library.Images.cover">
             <summary>
             • Doujin cover image.
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Images.page_source">
+        <member name="P:kasuNhentaiCS.library.Images.page_source">
             <summary>
             • Doujin image source.
             </summary>
         </member>
-        <member name="T:kasuNhentaiCS.library._Tag_table">
+        <member name="T:kasuNhentaiCS.library.Tag_table">
             <summary>
             Waoh how did you find this? <br/>
             this is illegal!
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.parodies">
+        <member name="P:kasuNhentaiCS.library.Tag_table.parodies">
             <summary>
             • I Like konosuba
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.characters">
+        <member name="P:kasuNhentaiCS.library.Tag_table.characters">
             <summary>
             • I love megumin
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.tag">
+        <member name="P:kasuNhentaiCS.library.Tag_table.tag">
             <summary>
             • what?
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.artist">
+        <member name="P:kasuNhentaiCS.library.Tag_table.artist">
             <summary>
             • I don't really know about this
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.groups">
+        <member name="P:kasuNhentaiCS.library.Tag_table.groups">
             <summary>
             • Can't think 1 group tag.
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.languages">
+        <member name="P:kasuNhentaiCS.library.Tag_table.languages">
             <summary>
             • english ofc.
             </summary>
         </member>
-        <member name="P:kasuNhentaiCS.library._Tag_table.categories">
+        <member name="P:kasuNhentaiCS.library.Tag_table.categories">
             <summary>
             • ca
             </summary>
@@ -287,13 +287,13 @@
             Its still a URL replacer but this time it is really for the URL.
             </summary>
         </member>
-        <member name="T:kasuNhentaiCS._Matcher">
+        <member name="T:kasuNhentaiCS.Matcher">
             <summary>
             [Brain of the operation]<br/>
             Parses the Html string into an object. 
             </summary>
         </member>
-        <member name="M:kasuNhentaiCS._Matcher.BOOKnet(System.String)">
+        <member name="M:kasuNhentaiCS.Matcher.BOOKnet(System.String)">
             <summary>
             Requests for the <see langword="Nhentai.net"/> website's Html into string and parses it in to an object. 
             </summary>
@@ -306,7 +306,7 @@
             </param>
             <returns>A <see cref="T:kasuNhentaiCS.library.BookData"/> representation of the parsed html</returns>
         </member>
-        <member name="M:kasuNhentaiCS._Matcher.BOOKto(System.String)">
+        <member name="M:kasuNhentaiCS.Matcher.BOOKto(System.String)">
             <summary>
             Requests for the <see langword="Nhentai.to"/> website's Html into string and parses it in to an object. 
             </summary>
@@ -319,7 +319,7 @@
             </param>
             <returns>A <see cref="T:kasuNhentaiCS.library.BookData"/> representation of the parsed html</returns>
         </member>
-        <member name="M:kasuNhentaiCS._Matcher.PageInfo(System.String)">
+        <member name="M:kasuNhentaiCS.Matcher.PageInfo(System.String)">
             <summary>
             Requests for the <see langword="Nhentai.net"/> or <see langword="Nhentai.to"/> website's Html into string and parses it in to an object.
             </summary>

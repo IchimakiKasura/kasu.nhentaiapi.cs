@@ -80,12 +80,12 @@ public static class Parser
 
         if (url.domain == ".net")
         {
-            data = _Matcher.BOOKnet(url.href);
+            data = Matcher.BOOKnet(url.href);
             newUrl = $"https://nhentai.net{data.id}";
         }
         else
         {
-            data = _Matcher.BOOKto(url.href);
+            data = Matcher.BOOKto(url.href);
             newUrl = $"https://nhentai.to{data.id}";
         }
 
@@ -259,7 +259,7 @@ public static class Parser
 
         if (url.firstDir == "search") pageURL = $"{url.href}&page={num_page}";
 
-        var PageInfo = _Matcher.PageInfo(url.href);
+        var PageInfo = Matcher.PageInfo(url.href);
         List<string> data = PageInfo.body;
         var totalPage = PageInfo.totalPage;
 
@@ -274,7 +274,7 @@ public static class Parser
             "category"
         };
 
-        _resultsObject[] dataList = new _resultsObject[data.Count];
+        resultsObject[] dataList = new resultsObject[data.Count];
 
         foreach (var s in data.Select((value, i) => (value, i)))
         {
@@ -283,10 +283,10 @@ public static class Parser
             string languages = "";
 
             foreach (string lang in Lang)
-            {
+            {                
                 if (url.domain == ".net")
                 {
-                    switch (lang)
+                    switch (lang.Replace("data-tags=\"", ""))
                     {
                         case "6346":
                             languages += "japansese, ";
@@ -328,7 +328,7 @@ public static class Parser
                 title = Regex.Match(s.value, @"caption"">(?<title>.*?)<").Groups["title"].Value,
                 thumbnail = Regex.Match(s.value, @"data-src=""(?<thumb>.*?)""").Groups["thumb"].Value,
                 url = $"{matcherRegex.URLregex.Replace(url.href, "")}g/{id}",
-                languages = languages
+                languages = languages.Remove(languages.Length - 2)
             };
         }
 

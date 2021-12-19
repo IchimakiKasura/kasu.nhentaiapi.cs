@@ -3,7 +3,7 @@
 namespace kasuNhentaiCS.library;
 
 /// <summary>
-/// Properties for the <see cref="_Matcher.BOOKnet(string)"/>.
+/// Properties for the <see cref="Matcher.BOOKnet(string)"/>.
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 internal struct BookData
@@ -36,7 +36,7 @@ internal struct BookData
 }
 
 /// <summary>
-/// Properties for the <see cref="_Matcher.PageInfo(string)"/>.
+/// Properties for the <see cref="Matcher.PageInfo(string)"/>.
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 internal struct PageData
@@ -73,15 +73,15 @@ public struct BookObj
     /// <summary>
     /// • titles?
     /// </summary>
-    public _Title title { get; set; }
+    public Title title { get; set; }
     /// <summary>
     /// • images?
     /// </summary>
-    public _Images images { get; set; }
+    public Images images { get; set; }
     /// <summary>
     /// • tags?
     /// </summary>
-    public _Tag_table tag_table { get; set; }
+    public Tag_table tag_table { get; set; }
     /// <summary>
     /// • haha 69 pages seems cool.
     /// </summary>
@@ -124,7 +124,7 @@ public struct PageObj
     /// <summary>
     /// • results in array. wha-
     /// </summary>
-    public _resultsObject[] results { get; set; }
+    public resultsObject[] results { get; set; }
 }
 
 /// <summary>
@@ -132,7 +132,7 @@ public struct PageObj
 /// this is illegal!
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-public struct _resultsObject
+public struct resultsObject
 {
     /// <summary>
     /// • ID or Code or whatever you call.
@@ -160,7 +160,7 @@ public struct _resultsObject
 /// this is illegal!
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-public struct _Title
+public struct Title
 {
     /// <summary>
     /// original
@@ -176,7 +176,7 @@ public struct _Title
 /// this is illegal!
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-public struct _Images
+public struct Images
 {
     /// <summary>
     /// • Doujin cover image.
@@ -192,7 +192,7 @@ public struct _Images
 /// this is illegal!
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-public struct _Tag_table
+public struct Tag_table
 {
     /// <summary>
     /// • I Like konosuba
