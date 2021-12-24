@@ -20,7 +20,7 @@ internal class kasunhentaiapi
 
         var watch = new System.Diagnostics.Stopwatch();
         watch.Start();
-        var url = new nhentaiURL("https://nhentai.net/");
+        nhentaiURL url = new("https://nhentai.net/");
         console.log("-----NET-----");
         var ass = Parser.page(url);
         console.log("CurrentUrl: "+ass.CurrentUrl);

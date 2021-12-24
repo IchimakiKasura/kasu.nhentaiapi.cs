@@ -13,8 +13,8 @@
     <!-- Package info -->
     <Product>KasuNhentaiLibrary</Product>
     <PackageId>KasuNhentaiLibrary</PackageId>
-    <Version>0.5.1</Version>
-    <AssemblyVersion>0.5.1</AssemblyVersion>
+    <Version>0.5.5</Version>
+    <AssemblyVersion>0.5.5</AssemblyVersion>
     <Authors>Ichimaki Kasura</Authors>
     <Company>Ichimaki Kasura</Company>
     <Copyright>Copyright © 2021</Copyright>
@@ -23,8 +23,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <ProjectReference Include="..\kasuNhentaiCS.json\kasuNhentaiCS.Json.csproj" />
     <PackageReference Include="Benchmarkdotnet" Version="0.13.1" />
-    <CSFile Include="./Core/*.cs;./Core/lib/*.cs" Exclude="./main.cs"/>
+    <CSFile Include="./Core/*.cs;./Core/lib/*.cs" Exclude="./main.cs" />
   </ItemGroup>
 </Project>

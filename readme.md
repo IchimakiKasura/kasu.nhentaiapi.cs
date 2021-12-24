@@ -10,20 +10,21 @@ I'll try implementing a C# version of my [kasu.nhentaiapi.js](https://github.com
 Add this on the `<ItemGroup>`:<br/>
 ```csproj
 <Reference Include="-your path to-\output\kasuNhentaiCS.dll">
-<Reference Include="-your path to-\output\kasuNhentaiCS.Json.dll">
 ```
-Or put the `kasuNhentaiCS.dll` and `kasuNhentaiCS.Json.dll` in your root project and do
+Or put the `kasuNhentaiCS.dll` in your root project and do
 ```csproj
 <Reference Include="kasuNhentaiCS.dll">
-<Reference Include="kasuNhentaiCS.Json.dll">
 ```
-same goes for the `kasuNhentaiCS.xml` and `kasuNhentaiCS.Json.xml` if you want to get the Documentations
+same goes for the `kasuNhentaiCS.xml` if you want to get the Documentations
+
+Or install using `.nukpg`.
 
 ## Example
 ```cs
 using System;
 using System.Text;
 using kasuNhentaiCS;    // You don't wanna miss this
+using kasuNhentaiCS.library; // and this
 
 namespace Sample
 {
@@ -92,7 +93,7 @@ namespace Sample
             "languages":  "japanese"
         },
         {
-            //and more...
+            "//and more..."
         }
     ]
 }

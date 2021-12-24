@@ -289,7 +289,7 @@ public static class Parser
                     switch (lang.Replace("data-tags=\"", ""))
                     {
                         case "6346":
-                            languages += "japansese, ";
+                            languages += "japanese, ";
                             break;
                         case "29963":
                             languages += "chinese, ";
@@ -307,7 +307,7 @@ public static class Parser
                     switch (lang)
                     {
                         case "2":
-                            languages += "japansese, ";
+                            languages += "japanese, ";
                             break;
                         case "10197":
                             languages += "chinese, ";

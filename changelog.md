@@ -1,5 +1,10 @@
 # Changelogs
 
+## 0.5.5-beta
+- Fixed japanese word typo.
+- kasuNhentaiCS.Json is now embedded with the kasuNhentaiCS. Seperate file can be still downloaded.
+- Added .nukpg on downloads
+
 ## 0.5.1-beta
 - Fixed the bug where the language is not showing.
 
